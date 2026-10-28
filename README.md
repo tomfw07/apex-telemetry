@@ -19,15 +19,6 @@ The project also provides an explicit import path for externally sourced energy 
 - Unit tests for core analysis functions.
 - FastF1 local cache to reduce repeated downloads.
 
-## Screenshots
-
-Add screenshots of your running app here before sharing with employers. For example:
-
-```markdown
-![Telemetry comparison dashboard](docs/images/dashboard.png)
-![Braking event comparison](docs/images/braking-events.png)
-```
-
 ## Quick start
 
 Requires Python 3.10 or newer (64-bit recommended).
@@ -180,46 +171,6 @@ The editorial logic is implemented in `src/editorial.py` and covered by `tests/t
 
 The `docs/` directory contains a responsive, static, news-first website for Apex Telemetry. It can be hosted free with GitHub Pages and does not require a separate Python server. It starts with an intentionally empty newsroom rather than invented race headlines, plus an evergreen guide explaining how to read telemetry comparisons.
 
-### Enable the website
-
-1. Push this repository, including the `docs/` folder, to GitHub.
-2. Open the repository on GitHub and go to **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select the branch containing your changes (usually `main`) and the folder **`/docs`**, then click **Save**.
-5. Wait for the Pages deployment to finish. The site URL is usually `https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/`.
-6. In `docs/index.html`, replace the example GitHub and Instagram profile links with your actual project repository and Instagram account before sharing the site.
-
-The site is static HTML/CSS/JavaScript. Its public stories are stored in `docs/posts.json`; each article is rendered from that file. The Python Streamlit app remains a separate interactive analysis tool and can be deployed separately if desired.
-
-### Manually publish an approved newsroom draft
-
-The Streamlit newsroom does not publish anything automatically. To add a story to the website, first inspect the evidence and caveat in Streamlit, edit the caption if needed, approve it, and download **approved drafts only**.
-
-In Windows PowerShell, from the project root:
-
-```powershell
-# 1. Extract the approved draft ZIP so you can see the exact Markdown filename.
-Expand-Archive -Path "$HOME\Downloads\apex-telemetry-approved-drafts.zip" -DestinationPath "$HOME\Downloads\apex-approved-drafts" -Force
-Get-ChildItem "$HOME\Downloads\apex-approved-drafts" -Filter "*.md"
-
-# 2. Replace the draft filename and date with the values you want to publish.
-.\.venv\Scripts\python.exe scripts\publish_story.py --zip "$HOME\Downloads\apex-telemetry-approved-drafts.zip" --draft "draft-01-example-story.md" --date "2026-10-28"
-
-# 3. Review the local website data before publishing it.
-Get-Content docs\posts.json
-```
-
-The `--draft` value must match a Markdown filename inside the ZIP exactly. The helper refuses drafts that are not marked approved and prevents duplicate story IDs. It only updates `docs/posts.json` locally; it does **not** commit, push, deploy, or post to Instagram.
-
-After checking the article, commit and push the website change to GitHub. GitHub Pages will deploy the update. For example, if your default branch is `main`:
-
-```powershell
-git add docs/posts.json
-git commit -m "Publish approved Apex Telemetry analysis"
-git push
-```
-
-Use your own publication date, and verify every number, the session context, caveats, and source/platform terms before committing. The website is a public page, so only add material you intend to publish.
 
 ### Website structure
 
