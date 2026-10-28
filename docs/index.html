@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0d12">
+  <meta name="description" content="Apex Telemetry explains Formula 1 performance through data, telemetry and engineering-led race analysis.">
+  <title>Apex Telemetry — F1, explained by data</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="topline"><span class="live-dot"></span> INDEPENDENT F1 DATA & ENGINEERING</div>
+  <header class="site-header wrap">
+    <a class="brand" href="./" aria-label="Apex Telemetry home"><span class="brand-mark">A<span>///</span></span><span class="brand-copy">APEX <b>TELEMETRY</b><small>F1, EXPLAINED BY DATA</small></span></a>
+    <nav aria-label="Main navigation"><a class="active" href="#latest">Latest analysis</a><a href="#method">Our approach</a><a href="#about">About</a></nav>
+    <a class="header-cta" href="https://github.com/YOUR-USERNAME/f1-telemetry-energy-analysis" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">THE STORY BEHIND THE LAP TIME</p>
+        <h1>Every tenth<br>has a <em>story.</em></h1>
+        <p class="hero-lede">Formula 1 performance, decoded. We use telemetry and timing data to explain where drivers gain time, how corners unfold, and what the numbers can really tell us.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#latest">Explore the analysis <span>↓</span></a><a class="text-link" href="#method">How we read the data <span>↗</span></a></div>
+        <div class="hero-note"><span class="mini-line"></span><span>DATA FIRST. CLAIMS SECOND.</span></div>
+      </div>
+      <div class="hero-art" aria-label="Abstract telemetry trace illustration" role="img">
+        <div class="art-label label-top"><span>TELEMETRY / 01</span><span>DATA → INSIGHT</span></div>
+        <div class="track-grid"></div>
+        <svg class="telemetry-art" viewBox="0 0 620 390" role="img" aria-label="Illustrative telemetry traces"><defs><linearGradient id="redfade" x1="0" x2="1"><stop offset="0" stop-color="#ff4b55" stop-opacity=".1"/><stop offset=".6" stop-color="#ff4b55"/><stop offset="1" stop-color="#ff4b55" stop-opacity=".4"/></linearGradient></defs><path d="M15 300 C55 285 60 120 115 128 S165 270 220 245 S280 70 340 95 S390 255 440 214 S520 115 605 145" fill="none" stroke="#303a48" stroke-width="2" stroke-dasharray="5 8"/><path d="M15 265 C55 240 75 210 110 215 S155 150 200 175 S260 290 305 250 S355 145 400 163 S480 235 525 180 S570 155 605 165" fill="none" stroke="#8a98aa" stroke-width="2"/><path d="M15 300 C55 285 60 120 115 128 S165 270 220 245 S280 70 340 95 S390 255 440 214 S520 115 605 145" fill="none" stroke="url(#redfade)" stroke-width="4"/><path d="M15 330 L605 330" stroke="#384252" stroke-width="1"/><path d="M15 70 L605 70 M15 135 L605 135 M15 200 L605 200 M15 265 L605 265" stroke="#27303c" stroke-width="1" stroke-dasharray="3 7"/><circle cx="340" cy="95" r="6" fill="#ff4b55"/><circle cx="340" cy="95" r="15" fill="none" stroke="#ff4b55" stroke-opacity=".45"/><text x="358" y="82" fill="#f4f6f8" font-size="12" font-family="monospace">BRAKE / TURN-IN</text><text x="18" y="355" fill="#8793a3" font-size="11" font-family="monospace">DISTANCE →</text><text x="18" y="48" fill="#8793a3" font-size="11" font-family="monospace">RELATIVE TRACE / ILLUSTRATIVE</text></svg>
+        <div class="art-label label-bottom"><span>COMPARE</span><span>QUESTION</span><span>UNDERSTAND</span></div>
+        <div class="art-index">AT<span>01</span></div>
+      </div>
+    </section>
+    <section class="ticker" aria-label="Editorial principles"><div class="ticker-inner"><span>TELEMETRY</span><i>✳</i><span>RACE CRAFT</span><i>✳</i><span>ENGINEERING</span><i>✳</i><span>NO GUESSWORK</span><i>✳</i><span>TELEMETRY</span><i>✳</i><span>RACE CRAFT</span><i>✳</i><span>ENGINEERING</span><i>✳</i><span>NO GUESSWORK</span></div></section>
+    <section class="section wrap" id="latest">
+      <div class="section-heading"><div><p class="eyebrow">THE NEWSROOM</p><h2>Latest <em>analysis</em></h2></div><div class="section-aside">Evidence-led stories.<br>Built from available data.</div></div>
+      <div id="featured-story" class="featured-story" hidden></div>
+      <div id="story-grid" class="story-grid" aria-live="polite"></div>
+      <div id="empty-state" class="empty-state"><div class="empty-icon">AT<span>+</span></div><div><h3>The first story is being lined up.</h3><p>Race analysis will appear here after a draft has been reviewed and manually added to the public site. No fabricated headlines. No auto-publishing.</p><p class="muted">In the meantime, start with our guide to reading a telemetry comparison below.</p></div></div>
+      <div id="article-view" class="article-view" hidden></div>
+    </section>
+    <section class="method-band" id="method"><div class="wrap method-layout"><div><p class="eyebrow">HOW WE WORK</p><h2>Data tells us <em>what.</em><br>Context helps explain <em>why.</em></h2><p class="method-intro">A chart can show a difference. It cannot automatically tell you what caused it. We separate measured observations from interpretation, and make uncertainty visible.</p></div><div class="method-points"><article><span>01</span><div><h3>Start with the measurement</h3><p>Use available timing and telemetry channels, and label estimates clearly.</p></div></article><article><span>02</span><div><h3>Compare like with like</h3><p>State the session, drivers and laps. Note factors such as tyres, traffic and track conditions.</p></div></article><article><span>03</span><div><h3>Don't overclaim</h3><p>Describe what the data supports—and what it cannot prove.</p></div></article></div></div></section>
+    <section class="section wrap guide-section" id="guide"><div class="guide-copy"><p class="eyebrow">FIELD NOTES / 001</p><h2>How to read an F1 telemetry comparison</h2><p>Telemetry traces are most useful when read together. Speed shows the car's velocity; throttle shows accelerator input; brake channels indicate brake state where available. Aligning laps by distance helps compare what happened at roughly the same point on track.</p><p>A trace is not a complete explanation of performance. Driver inputs, tyre condition, fuel, traffic, setup, weather and track evolution can all matter—and public data does not expose every team measurement.</p><p class="muted">This is an evergreen guide, not a report about a particular race or driver.</p></div><div class="guide-card"><div class="guide-card-top"><span>APEX FIELD GUIDE</span><span>001 / BASICS</span></div><div class="guide-graphic"><div class="guide-axis"><span>SPEED</span><span>THROTTLE</span><span>BRAKE</span></div><svg viewBox="0 0 430 230" role="img" aria-label="Illustrative speed, throttle and brake traces"><path d="M0 40 H430 M0 90 H430 M0 140 H430 M0 190 H430" stroke="#27313e" stroke-dasharray="3 6"/><path d="M0 115 C45 115 65 35 110 35 S165 155 215 155 S280 58 320 58 S370 130 430 100" fill="none" stroke="#ff4b55" stroke-width="3"/><path d="M0 205 C55 205 65 180 105 180 S150 210 190 210 S250 160 300 160 S365 195 430 170" fill="none" stroke="#61c9a8" stroke-width="3"/><path d="M0 225 L100 225 L100 170 L135 170 L135 225 L260 225 L260 180 L290 180 L290 225 L430 225" fill="none" stroke="#e9c46a" stroke-width="2" stroke-linejoin="round"/></svg></div><p class="guide-caption"><span class="legend red"></span>Speed <span class="legend green"></span>Throttle <span class="legend yellow"></span>Brake state <span class="legend-note">Illustrative traces only</span></p></div></section>
+    <section class="about-band" id="about"><div class="wrap about-layout"><div><p class="eyebrow">ABOUT APEX TELEMETRY</p><h2>For the curious fan.<br><em>Built with an engineer's mindset.</em></h2></div><div><p>Apex Telemetry is an independent, educational project exploring Formula 1 performance through public timing and telemetry data. The goal is to make technical analysis clearer without pretending public data reveals everything happening inside a race car.</p><div class="about-links"><a href="https://github.com/YOUR-USERNAME/f1-telemetry-energy-analysis" target="_blank" rel="noreferrer">Explore the code on GitHub ↗</a><a href="https://www.instagram.com/YOUR-INSTAGRAM-HANDLE/" target="_blank" rel="noreferrer">Follow on Instagram ↗</a></div></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner"><a class="brand footer-brand" href="./"><span class="brand-mark">A<span>///</span></span><span class="brand-copy">APEX <b>TELEMETRY</b><small>F1, EXPLAINED BY DATA</small></span></a><p>Independent fan analysis. Not affiliated with Formula 1, the FIA or any team.</p><span>© <span id="year"></span> APEX TELEMETRY</span></div></footer>
+  <noscript><div class="wrap noscript">Enable JavaScript to view published stories. The field guide above remains available.</div></noscript>
+</body>
+</html>
